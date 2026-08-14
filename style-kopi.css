@@ -2640,6 +2640,50 @@ height: 700px;
 
 
 /* ==================================================
+   DET FÆRDIGE PRODUKT
+   ================================================== */
+
+.scn-page .scn-prototype-section {
+    background: var(--scn-orange-light);
+}
+
+.scn-page .scn-prototype-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.scn-page .scn-prototype-card {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    background: var(--scn-paper);
+    border: 2px solid var(--scn-ink);
+    border-radius: 22px;
+}
+
+.scn-page .scn-prototype-card img {
+    display: block;
+    width: 100%;
+    height: 390px;
+    margin: 0;
+    padding: 0;
+    background: var(--scn-paper);
+    object-fit: contain;
+    object-position: center;
+}
+
+.scn-page .scn-prototype-card figcaption {
+    padding: 0.9rem 1.1rem;
+    border-top: 1px solid var(--scn-line);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+/* ==================================================
    AFSLUTNING
    ================================================== */
 
@@ -2716,6 +2760,10 @@ height: 700px;
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .scn-page .scn-prototype-grid {
+        grid-template-columns: 1fr;
+    }
+
     .scn-page .scn-conclusion {
         width: calc(100% - 2.5rem);
     }
@@ -2729,8 +2777,11 @@ height: 700px;
     .scn-page .scn-artwork {
         height: 220px;
     }
-}
 
+    .scn-page .scn-prototype-card img {
+        height: 280px;
+    }
+}
 
 
 
