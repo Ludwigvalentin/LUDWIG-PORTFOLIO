@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiloversigt | Spilcaféen</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <a href="./" aria-label="Gå til Spilcaféens forside">
+                <img
+                    src="./assets/img/logo.webp"
+                    width="360"
+                    height="272"
+                    alt="Spilcaféens logo"
+                    decoding="async"
+                >
+            </a>
+
+            <h1>Spiloversigt</h1>
+
+            <div></div>
+        </div>
+
+        <h2 class="visually-hidden" id="searchAndFilterHeading">Søg og filtrer spil</h2>
+
+        <section class="searchAndFilters" aria-labelledby="searchAndFilterHeading">
+            <div class="searchAndFilters__row">
+                <div class="filters">
+                    <button
+                        type="button"
+                        class="chip"
+                        data-filter="all"
+                        aria-expanded="false"
+                        aria-controls="filterPanel"
+                    >
+                        Filtre
+                    </button>
+                </div>
+
+                <div class="search">
+                    <div class="searchInput">
+                        <div class="magnifier" aria-hidden="true">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="m21 21-4.34-4.34"></path>
+                                <circle cx="11" cy="11" r="8"></circle>
+                            </svg>
+                        </div>
+
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Søg..."
+                            aria-label="Søg efter spil"
+                        >
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="selected-chips" aria-live="polite"></div>
+        </section>
+
+        <div
+            id="filterPanel"
+            class="filter-panel hidden"
+            role="region"
+            aria-label="Spilfiltre"
+        >
+            <fieldset class="filter-group">
+                <legend>Sted</legend>
+
+                <div class="filter-options">
+                    <button type="button" class="filter-option" data-filter="location" data-option="">Alle</button>
+                    <button type="button" class="filter-option" data-filter="location" data-option="Aalborg">Aalborg</button>
+                    <button type="button" class="filter-option" data-filter="location" data-option="Vestergade">Aarhus Vestergade</button>
+                    <button type="button" class="filter-option" data-filter="location" data-option="Fredensgade">Aarhus Fredensgade</button>
+                    <button type="button" class="filter-option" data-filter="location" data-option="Kolding">Kolding</button>
+                </div>
+            </fieldset>
+
+            <fieldset class="filter-group">
+                <legend>Antal spillere</legend>
+
+                <div class="filter-options">
+                    <button type="button" class="filter-option" data-filter="players" data-option="">Alle</button>
+                    <button type="button" class="filter-option" data-filter="players" data-option="2">2</button>
+                    <button type="button" class="filter-option" data-filter="players" data-option="4">4</button>
+                    <button type="button" class="filter-option" data-filter="players" data-option="6">6</button>
+                    <button type="button" class="filter-option" data-filter="players" data-option="8">8</button>
+                    <button type="button" class="filter-option" data-filter="players" data-option="10">10</button>
+                </div>
+            </fieldset>
+
+            <fieldset class="filter-group">
+                <legend>Genre</legend>
+
+                <div class="filter-options">
+                    <button type="button" class="filter-option" data-filter="genre" data-option="">Alle</button>
+                    <button type="button" class="filter-option" data-filter="genre" data-option="Familiespil">Familiespil</button>
+                    <button type="button" class="filter-option" data-filter="genre" data-option="Quiz">Quiz</button>
+                    <button type="button" class="filter-option" data-filter="genre" data-option="Strategi">Strategi</button>
+                    <button type="button" class="filter-option" data-filter="genre" data-option="Terninger">Terninger</button>
+                    <button type="button" class="filter-option" data-filter="genre" data-option="Kortspil">Kortspil</button>
+                </div>
+            </fieldset>
+
+            <fieldset class="filter-group">
+                <legend>Sværhedsgrad</legend>
+
+                <div class="filter-options">
+                    <button type="button" class="filter-option" data-filter="difficulty" data-option="">Alle</button>
+                    <button type="button" class="filter-option" data-filter="difficulty" data-option="Let">Let</button>
+                    <button type="button" class="filter-option" data-filter="difficulty" data-option="Mellem">Mellem</button>
+                    <button type="button" class="filter-option" data-filter="difficulty" data-option="Svær">Svær</button>
+                </div>
+            </fieldset>
+
+            <fieldset class="filter-group">
+                <legend>Spilletid</legend>
+
+                <div class="filter-options">
+                    <button type="button" class="filter-option" data-filter="time" data-option="">Alle</button>
+                    <button type="button" class="filter-option" data-filter="time" data-option="20">Maks 20 min.</button>
+                    <button type="button" class="filter-option" data-filter="time" data-option="30">Maks 30 min.</button>
+                    <button type="button" class="filter-option" data-filter="time" data-option="60">Maks 60 min.</button>
+                    <button type="button" class="filter-option" data-filter="time" data-option="120">Maks 120 min.</button>
+                </div>
+            </fieldset>
+
+            <button type="button" id="resetFilters">
+                Nulstil filtre
+            </button>
+        </div>
+    </header>
+
+    <section class="top-games" aria-labelledby="topGamesHeading">
+        <div class="top-games__header">
+            <div>
+                <p class="top-games__eyebrow">Anbefalet</p>
+                <h2 id="topGamesHeading">Bedst ratede spil</h2>
+            </div>
+            <nav class="carousel-controls" aria-label="Naviger i bedst ratede spil">
+                <button type="button" class="carousel-control" id="previousTopGame" aria-label="Vis forrige spil">&#8592;</button>
+                <button type="button" class="carousel-control" id="nextTopGame" aria-label="Vis næste spil">&#8594;</button>
+            </nav>
+        </div>
+        <div class="top-games__track" id="topGamesTrack" tabindex="0" aria-label="Bedst ratede spil"></div>
+    </section>
+
+    <main id="results" aria-labelledby="allGamesHeading">
+        <h2 id="allGamesHeading">Alle spil</h2>
+        <div id="resultsList"></div>
+    </main>
+
+    <div id="drawHolder"></div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
