@@ -119,6 +119,10 @@ nextTopGame.addEventListener("click", () => {
 });
 
 function filterGames() {
+  document.querySelector(".top-games").hidden = Object.entries(selected).some(
+    ([filter, value]) => filter !== "search" && Boolean(value)
+  );
+
   let filteredGames = [...allGames];
 
   Object.entries(selected).forEach(([filter, value]) => {
@@ -203,15 +207,8 @@ function resetFilters() {
   });
 
   updateSelectedChips();
-  displayGames(allGames);
-  filterPanel.classList.add("hidden");
+  filterGames();
 
-  const filterButton = document.querySelector('.chip[data-filter="all"]');
-  if (filterButton) {
-    filterButton.classList.remove("active");
-    filterButton.setAttribute("aria-expanded", "false");
-    filterButton.focus();
-  }
 }
 
 function displayDrawer(id) {
@@ -359,6 +356,22 @@ filtersContainer.addEventListener("click", (e) => {
   }
 });
 
+function closeFilters() {
+  filterPanel.classList.add("hidden");
+  const filterButton = document.querySelector('.chip[data-filter="all"]');
+  filterButton.classList.remove("active");
+  filterButton.setAttribute("aria-expanded", "false");
+  filterButton.focus();
+}
+
+document.getElementById("closeFilters").addEventListener("click", closeFilters);
+filterPanel.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    event.preventDefault();
+    closeFilters();
+  }
+});
+
 filterPanel.addEventListener("click", (e) => {
   const option = e.target.closest(".filter-option");
   if (!option) return;
@@ -381,11 +394,6 @@ filterPanel.addEventListener("click", (e) => {
 
   filterGames();
   updateSelectedChips();
-  filterPanel.classList.add("hidden");
-  const filterButton = document.querySelector('.chip[data-filter="all"]');
-  filterButton.classList.remove("active");
-  filterButton.setAttribute("aria-expanded", "false");
-  filterButton.focus();
 });
 
 document.addEventListener("click", (e) => {
