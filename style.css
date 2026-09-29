@@ -1,10 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oi&family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Oi&family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Manrope:wght@200..800&family=Oi&family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Oi&family=Orbitron:wght@400..900&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:opsz,wght@6..96,600;6..96,700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
 /* -----------------------------
    Base / Global Styles
    ----------------------------- */
@@ -825,7 +821,6 @@ height: 700px;
         padding: clamp(2rem, 10vw, 4rem);
     }
 }
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&display=swap');
 
 /* Projektkort i samme visuelle stil som portfolioens hero. */
 
@@ -1047,7 +1042,6 @@ height: 700px;
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 .panel-about.about-editorial {
     padding: 0 !important;
@@ -1122,12 +1116,6 @@ height: 700px;
   to {
     transform: translateX(-50%);
   }
-}
-
-@keyframes about-marquee {
-    to {
-        transform: translateX(-50%);
-    }
 }
 
 .about-shell {
@@ -1431,7 +1419,6 @@ height: 700px;
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 .contact-panel {
     padding: clamp(6rem, 10vw, 10rem) 1.5rem 9rem !important;
@@ -1604,8 +1591,6 @@ height: 700px;
 /* -----------------------------
    THEFITCLUB STYLES
    ----------------------------- */
-
-@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:opsz,wght@6..96,600;6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 :root {
   --tfc-blue: #075fce;
@@ -2223,18 +2208,10 @@ height: 700px;
   }
 }
 
+@media (max-width: 620px) {
   .tfc-page .brand {
     width: 44px;
     height: 50px;
-    @media (max-width: 620px) {
-  }
-
-  .tfc-page .site-nav {
-    gap: 1rem;
-  }
-
-  .tfc-page .site-nav a {
-    font-size: 0.78rem;
   }
 
   .tfc-hero h1 {
@@ -2279,9 +2256,7 @@ height: 700px;
     padding: 3rem 1.5rem;
     border-radius: 28px;
   }
-
-  }
-
+}
 
 /* ==================================================
    STORCENTER NORD
@@ -2792,8 +2767,6 @@ height: 700px;
 
 
 
-
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap");
 
 :root {
   --aa-forest: #173f31;
