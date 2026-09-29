@@ -436,6 +436,21 @@ height: 700px;
   object-fit: contain;
 }
 
+.projects-grid .project-image-placeholder {
+  background: linear-gradient(135deg, #f2bf4e, #f6d777);
+  color: #0a0a0a;
+  font-size: clamp(1.6rem, 2vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.projects-grid .project-image-placeholder span {
+  display: inline-block;
+  max-width: 72%;
+  line-height: 1.1;
+}
 
 .projects-grid .project-info {
   display: flex;
@@ -896,6 +911,7 @@ height: 700px;
 .project-card:nth-child(2)::before { content: "PROJEKT 02"; }
 .project-card:nth-child(3)::before { content: "PROJEKT 03"; }
 .project-card:nth-child(4)::before { content: "PROJEKT 04"; }
+.project-card:nth-child(5)::before { content: "PROJEKT 05"; }
 
 .project-card:hover {
     transform: translateY(-9px) !important;
