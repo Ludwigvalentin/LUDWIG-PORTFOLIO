@@ -2374,17 +2374,7 @@ body.portfolio-site {
   justify-self: stretch;
 }
 
-.portfolio-site .hero-title h1 {
-  color: var(--site-text);
-  font: 700 clamp(68px, 9vw, 138px)/1 var(--site-display);
-  letter-spacing: -0.055em;
-  text-align: left;
-  margin: 0px 0px 22px;
-  width: auto;
-  opacity: 1;
-  transform: none;
-  animation: auto ease 0s 1 normal none running none;
-}
+
 
 .portfolio-site .hero-subtitle {
   color: var(--site-accent);
@@ -2990,9 +2980,7 @@ body.portfolio-site.museum-page {
     padding-block: 48px;
   }
 
-  .portfolio-site .hero-title h1 {
-    font-size: clamp(58px, 12vw, 96px);
-  }
+
 
   .portfolio-site .hero-image-wrap {
     max-width: 460px;
@@ -3265,3 +3253,21 @@ body.portfolio-site.museum-page {
 .portfolio-site .tfc-hero h1 { font-family: 'Libre Bodoni', Georgia, serif; font-weight: 600; }
 .portfolio-site.scn-page :is(h1, h2) { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .portfolio-site.aa-page :is(h1, h2) { font-family: Georgia, serif; font-weight: 400; }
+
+.art-gallery-controls[hidden] { display: none; }
+
+/* Overskriften spænder over både tekst og portræt. */
+.portfolio-site .hero-heading {
+  grid-column: 1 / -1;
+  margin: 20px 0 0;
+  color: #044faa;
+  font: 700 clamp(56px, 9vw, 138px)/1.1 var(--site-display);
+  letter-spacing: -.035em;
+  text-align: center;
+  white-space: nowrap;
+}
+.portfolio-site .hero-content { row-gap: 44px; }
+@media (max-width: 800px) {
+  .portfolio-site .hero-heading { font-size: clamp(38px, 11vw, 80px); }
+  .portfolio-site .hero-content { row-gap: 32px; }
+}
