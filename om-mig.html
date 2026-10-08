@@ -9,7 +9,7 @@
 
     <title>Om mig</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 
     <link
       rel="preconnect"
@@ -21,90 +21,37 @@
       href="https://fonts.gstatic.com"
       crossorigin
     >
+</head>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kranky&display=swap"
-      rel="stylesheet"
-    >
-  </head>
-
-  <body>
+  <body class="portfolio-site ">
     <header class="site-header">
       <a
         class="brand"
         href="index.html"
         aria-label="Gå til forsiden"
-      >
-        <img
-          src="Img/logo.png"
-          alt="Ludwig Elhauge logo"
-        >
-      </a>
+      ><img src="Img/logo.png" alt="Ludwig Elhauge logo"></a>
 
-      <nav
-        class="site-nav"
-        aria-label="Primær navigation"
-      >
-        <a href="index.html">Forside</a>
-        <a href="om-mig.html">Om mig</a>
+      <nav class="site-nav" aria-label="Primær navigation">
+        <a href="index.html#projekter">Projekter</a>
+        <a href="om-mig.html" aria-current="page">Om mig</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
     </header>
 
     <main>
       <section class="panel panel-about about-editorial">
-<div class="about-ribbon" aria-hidden="true">
-  <div class="about-ribbon-track">
-
-    <div class="about-ribbon-group">
-      <span>UI/UX DESIGN</span><i>✦</i>
-      <span>VISUEL IDENTITET</span><i>✦</i>
-      <span>TYPOGRAFI</span><i>✦</i>
-      <span>FRONTEND</span><i>✦</i>
-
-      <span>UI/UX DESIGN</span><i>✦</i>
-      <span>VISUEL IDENTITET</span><i>✦</i>
-      <span>TYPOGRAFI</span><i>✦</i>
-      <span>FRONTEND</span><i>✦</i>
-
-      <span>UI/UX DESIGN</span><i>✦</i>
-      <span>VISUEL IDENTITET</span><i>✦</i>
-      <span>TYPOGRAFI</span><i>✦</i>
-      <span>FRONTEND</span><i>✦</i>
-    </div>
-
-    <div class="about-ribbon-group">
-      <span>UI/UX DESIGN</span><i>✦</i>
-      <span>VISUEL IDENTITET</span><i>✦</i>
-      <span>TYPOGRAFI</span><i>✦</i>
-      <span>FRONTEND</span><i>✦</i>
-
-      <span>UI/UX DESIGN</span><i>✦</i>
-      <span>VISUEL IDENTITET</span><i>✦</i>
-      <span>TYPOGRAFI</span><i>✦</i>
-      <span>FRONTEND</span><i>✦</i>
-
-      <span>UI/UX DESIGN</span><i>✦</i>
-      <span>VISUEL IDENTITET</span><i>✦</i>
-      <span>TYPOGRAFI</span><i>✦</i>
-      <span>FRONTEND</span><i>✦</i>
-    </div>
-
-  </div>
-</div>
-
-        <div class="panel-content about-shell">
+<div class="panel-content about-shell">
           <div class="about-intro-layout">
             <header class="about-intro">
               <p class="about-kicker">
                 Designer med fokus på mennesker
               </p>
 
-<h2>
+<h1>
   Jeg kombinerer<br>
   idé,&nbsp;identitet<br>
   og kode.
-</h2>
+</h1>
 
               <p class="about-lead">
                 Jeg er Ludwig – multimediedesigner med blik for de
@@ -116,7 +63,7 @@
 
             <div class="about-intro-image">
               <img
-                src="Img/ludwigvaeg.png"
+                src="Img/Ludwigvaeg.png"
                 alt="Ludwig Elhauge"
               >
             </div>
@@ -228,15 +175,12 @@
               Det arbejder jeg i
             </h2>
 
-            <ul class="about-skills">
-              <li>ILLUSTRATOR</li>
-              <li>PHOTOSHOP</li>
-              <li>VS CODE</li>
-              <li>GITHUB</li>
-              <li>WORDPRESS</li>
-              <li>AFTEREFFECTS</li>
-              <li>FIGMA</li>
-            </ul>
+            <div class="tools-marquee" tabindex="0" aria-label="Mine værktøjer. Hold markøren over båndet eller fokusér det for at pause.">
+              <div class="tools-marquee-track">
+                <ul class="tools-marquee-group"><li>Illustrator</li><li>Photoshop</li><li>VS Code</li><li>GitHub</li><li>WordPress</li><li>After Effects</li><li>Figma</li></ul>
+                <ul class="tools-marquee-group" aria-hidden="true"><li>Illustrator</li><li>Photoshop</li><li>VS Code</li><li>GitHub</li><li>WordPress</li><li>After Effects</li><li>Figma</li></ul>
+              </div>
+            </div>
           </section>
 
           <section class="about-cta">
@@ -261,9 +205,7 @@
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-meta">
-          <p class="footer-email">
-            lv.elhauge@gmail.com
-          </p>
+          <a class="footer-email" href="mailto:lv.elhauge@gmail.com">lv.elhauge@gmail.com ↗</a>
 
           <a
             class="footer-link"

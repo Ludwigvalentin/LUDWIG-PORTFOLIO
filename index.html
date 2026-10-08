@@ -9,27 +9,12 @@
     />
     <title>Ludwig Elhauge – Portfolio</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=6" />
+</head>
 
-    <style>
-      .project-card {
-        position: relative;
-        z-index: 2;
-        pointer-events: auto;
-        cursor: pointer;
-      }
-
-      .projects-label {
-        pointer-events: none;
-      }
-    </style>
-  </head>
-
-  <body>
+  <body class="portfolio-site ">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Gå til forsiden">
-        <img src="Img/logo.png" alt="Ludwig Elhauge logo" />
-      </a>
+      <a class="brand" href="index.html" aria-label="Gå til forsiden"><img src="Img/logo.png" alt="Ludwig Elhauge logo"></a>
 
       <nav class="site-nav" aria-label="Primær navigation">
         <a href="#projekter">Projekter</a>
@@ -42,8 +27,9 @@
       <section class="hero">
         <div class="hero-content">
           <div class="hero-title">
-            <h1>PORTFOLIO</h1>
-            <p class="hero-subtitle">By Ludwig Elhauge</p>
+            <p class="site-kicker">Multimediedesign · Aarhus</p>
+            <h1>Portfolio.</h1>
+            <p class="hero-subtitle">Visuel identitet. Digitale oplevelser.</p>
 
             <p class="hero-description">
               Jeg har en stor passion for digitalt og grafisk design og læser
@@ -76,10 +62,10 @@
       <section class="baggrund2-banner">
         <div class="baggrund2-overlay">
           <div class="baggrund2-text">
-            <h2>Jeg brænder for</h2>
+            <h2>Fra idé til oplevelse.</h2>
 
             <p>
-              at skabe digitale oplevelser hvor æstetik, funktionalitet og
+              Jeg skaber digitale oplevelser, hvor æstetik, funktionalitet og
               brugeroplevelse går hånd i hånd. Gennem min uddannelse i
               multimediedesign har jeg arbejdet med branding, UI/UX og
               frontend-udvikling, og jeg motiveres af at omsætte idéer til
@@ -95,105 +81,49 @@
         </div>
       </section>
 
-      <section class="panel-projects" id="projekter">
-        <div class="projects-label" aria-hidden="true">
-          <span>PROJEKTER</span>
-        </div>
-
-        <div class="panel-content">
-          <div class="projects-grid">
-            <a class="project-card" href="ADVENTUREALLEVEGNE.html">
-              <div class="project-image">
-                <img
-                  src="Img/ADVENTUREALLEVEGNE.png"
-                  alt="Adventure Allevegne projekt"
-                />
-              </div>
-
-              <div class="project-info">
-                <div>
-                  <h3>ADVENTURE ALLEVEGNE</h3>
-                  <p>Branding · UI/UX</p>
-                </div>
-
-                <span class="project-link">Se projekt →</span>
-              </div>
+      <section class="art-gallery" id="projekter" aria-labelledby="gallery-title">
+        <header class="art-gallery-heading">
+          <p>Udvalgte værker / 01–05</p>
+          <h2 id="gallery-title">Projektgalleri</h2>
+          <p class="art-gallery-intro">Idéer, identiteter og digitale oplevelser.<br>Et indblik i mit kreative arbejde.</p>
+        </header>
+        <div class="art-gallery-stage">
+          <div class="art-gallery-track" id="gallery-track" tabindex="0" aria-label="Projekter. Rul vandret for at se flere.">
+            <a class="art-work art-work-adventure" href="ADVENTUREALLEVEGNE.html">
+              <div class="art-work-frame"><img src="Img/ADVENTUREALLEVEGNE.png" alt="Adventure Allevegne" loading="lazy" decoding="async"></div>
+              <div class="art-work-caption"><span class="art-work-number">01</span><div><h3>Adventure Allevegne</h3><p>Branding · UI/UX</p></div><span class="art-work-arrow" aria-hidden="true">↗</span></div>
             </a>
-
-            <a class="project-card" href="STORCENTERNORD.html">
-              <div class="project-image">
-                <img
-                  src="Img/STORCENTERNORD.png"
-                  alt="Storcenter Nord projekt"
-                />
-              </div>
-
-              <div class="project-info">
-                <div>
-                  <h3>STORCENTER NORD</h3>
-                  <p>Branding · Webdesign</p>
-                </div>
-
-                <span class="project-link">Se projekt →</span>
-              </div>
+            <a class="art-work art-work-nord" href="STORCENTERNORD.html">
+              <div class="art-work-frame"><img src="Img/STORCENTERNORD.png" alt="Storcenter Nord" loading="lazy" decoding="async"></div>
+              <div class="art-work-caption"><span class="art-work-number">02</span><div><h3>Storcenter Nord</h3><p>Branding · Webdesign</p></div><span class="art-work-arrow" aria-hidden="true">↗</span></div>
             </a>
-
-            <a class="project-card" href="museumprojekt.html">
-              <div class="project-image">
-                <img src="Img/museumlogo.png" alt="Spilcaféen projekt" />
-              </div>
-
-              <div class="project-info">
-                <div>
-                  <h3>MUSEUM OVARTACI</h3>
-                  <p>Koncept · UI/UX</p>
-                </div>
-
-                <span class="project-link">Se projekt →</span>
-              </div>
+            <a class="art-work art-work-museum" href="museumprojekt.html">
+              <div class="art-work-frame"><img src="Img/museumlogo.png" alt="Museum Ovartaci" loading="lazy" decoding="async"></div>
+              <div class="art-work-caption"><span class="art-work-number">03</span><div><h3>Museum Ovartaci</h3><p>Koncept · UI/UX</p></div><span class="art-work-arrow" aria-hidden="true">↗</span></div>
             </a>
-
-            <a
-              class="project-card"
-              href="https://ludwigvalentin.github.io/LUDWIG-PORTFOLIO/spilcafe/"
-            >
-              <div class="project-image project-image-placeholder">
-                <span>SPILCAFÉEN</span>
-              </div>
-
-              <div class="project-info">
-                <div>
-                  <h3>SPILCAFÉEN</h3>
-                  <p>Webdesign · UX</p>
-                </div>
-
-                <span class="project-link">Se projekt →</span>
-              </div>
+            <a class="art-work art-work-cafe" href="spilcafe/">
+              <div class="art-work-frame"><img src="spilcafe/assets/img/logo.webp" alt="Spilcaféen" loading="lazy" decoding="async"></div>
+              <div class="art-work-caption"><span class="art-work-number">04</span><div><h3>Spilcaféen</h3><p>Webdesign · UX</p></div><span class="art-work-arrow" aria-hidden="true">↗</span></div>
             </a>
-
-            <a class="project-card" href="THEFITCLUB.html">
-              <div class="project-image">
-                <img src="Img/thefitclub-produkt.png" alt="The Fit Club projekt" />
-              </div>
-
-              <div class="project-info">
-                <div>
-                  <h3>THEFITCLUB</h3>
-                  <p>Webdesign · Frontend</p>
-                </div>
-
-                <span class="project-link">Se projekt →</span>
-              </div>
+            <a class="art-work art-work-fit" href="THEFITCLUB.html">
+              <div class="art-work-frame"><img src="Img/thefitclub-produkt.png" alt="The Fit Club" loading="lazy" decoding="async"></div>
+              <div class="art-work-caption"><span class="art-work-number">05</span><div><h3>The Fit Club</h3><p>Webdesign · Frontend</p></div><span class="art-work-arrow" aria-hidden="true">↗</span></div>
             </a>
           </div>
+          <div class="art-gallery-controls" hidden>
+            <button class="art-gallery-prev" type="button" aria-label="Forrige projekt" aria-controls="gallery-track">←</button>
+            <div class="art-gallery-dots" aria-label="Vælg projekt"></div>
+            <button class="art-gallery-next" type="button" aria-label="Næste projekt" aria-controls="gallery-track">→</button>
+          </div>
         </div>
+        <p class="art-gallery-note">Træk eller rul gennem galleriet · Klik på et værk for at udforske projektet</p>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-meta">
-          <p class="footer-email">lv.elhauge@gmail.com</p>
+          <a class="footer-email" href="mailto:lv.elhauge@gmail.com">lv.elhauge@gmail.com ↗</a>
 
           <a
             class="footer-link"
